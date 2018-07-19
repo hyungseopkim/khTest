@@ -28,6 +28,14 @@
             margin-top: 40px;
         }
     </style>
+    <script>
+ $(document).ready(function(){
+	 $("#back").click(function(){
+		 $(location).attr("href","index.do");
+	 });
+ });
+
+</script>
 </head>
 
 <body>
