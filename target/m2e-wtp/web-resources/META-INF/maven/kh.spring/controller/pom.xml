@@ -89,6 +89,7 @@
 			<scope>runtime</scope>
 
 		</dependency>
+		<!-- oracle -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
