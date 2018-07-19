@@ -16,26 +16,26 @@ public class BuebeServiceImpl implements BuebeService {
 	
 	@Override
 	public int insertData(BuebeDTO dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return this.dao.insertData(dto);
 	}
 
 	@Override
 	public List<BuebeDTO> selectData() {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return this.dao.selectData();
 	}
 
 	@Override
 	public int updateData(BuebeDTO dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return this.dao.updateData(dto);
 	}
 
 	@Override
 	public int deleteData(int seq) {
-		// TODO Auto-generated method stub
-		return 0;
+	
+		return this.dao.deleteData(seq);
 	}
 
 }
