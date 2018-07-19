@@ -16,7 +16,8 @@
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
+	
 	<context:component-scan base-package="kh.spring"></context:component-scan>
 	
-	<mvc:resources location="/resources/" mapping="/resources/**" cache-period="31556926"/>
+
 </beans>
