@@ -39,7 +39,7 @@
 		var title = $("#title").val();
 		var writer=$("#writer").val();
 		var contents=$("#contents").val();
-		
+		var password =$("#password").val();
 		if(title==""){
 			alert("제목을 입력해주세요.");
 			return false;
@@ -92,6 +92,15 @@
                         <td>&nbsp;</td>
                         <td align="center">이름</td>
                         <td><input name="writer" size="50" maxlength="50" id="writer"></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                       <tr height="1" bgcolor="#dddddd">
+                        <td colspan="4"></td>
+                    </tr>
+                     <tr>
+                        <td>&nbsp;</td>
+                        <td align="center">비밀번호</td>
+                        <td><input name="password" size="50" maxlength="50" id="password"></td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr height="1" bgcolor="#dddddd">
