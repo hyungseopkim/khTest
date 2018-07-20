@@ -39,6 +39,7 @@
 </head>
 
 <body>
+<form action="writeBoard.do" method="post">
     <table border="1" id="table">
         <tr>
             <td>
@@ -94,6 +95,6 @@
                 </td>
         </tr>
     </table>
-
+</form>
 </body>
 </html>
