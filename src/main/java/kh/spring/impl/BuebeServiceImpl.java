@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import kh.spring.dto.BuebeDTO;
 import kh.spring.interfaces.BuebeDAO;
@@ -15,6 +16,7 @@ public class BuebeServiceImpl implements BuebeService {
 	private BuebeDAO dao;
 	
 	@Override
+	
 	public int insertData(BuebeDTO dto) {
 		
 		return this.dao.insertData(dto);
