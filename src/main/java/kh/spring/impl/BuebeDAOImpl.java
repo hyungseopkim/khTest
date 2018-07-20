@@ -33,7 +33,7 @@ public class BuebeDAOImpl implements BuebeDAO{
 				 dto.setWriter(rs.getString("writer"));
 				 dto.setTitle(rs.getString("title"));
 				 dto.setContents(rs.getString("contents"));
-				 dto.setWritedate(rs.getString("writedate"));
+				 dto.setWritedate(rs.getString("wirtedate"));
 				return dto;
 			}
 			

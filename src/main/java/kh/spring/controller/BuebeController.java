@@ -1,5 +1,7 @@
 package kh.spring.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,17 +19,28 @@ public class BuebeController {
 	public String wirte() {
 		return "writeBoard.jsp";
 	}
+	
 	@RequestMapping("/index.do")
 	public String index() {
 		return "index.jsp";
 	}
+	
 	@RequestMapping("/writeBoard.do")
 	public ModelAndView writeBoard(BuebeDTO dto) {
 		ModelAndView mav = new ModelAndView();
 		int result = service.insertData(dto);
 		mav.addObject("result",result);
 		mav.setViewName("writeBoardProc.jsp");
-		return mav ;
+		return mav;
 		
+	}
+	
+	@RequestMapping("/board.do")
+	public ModelAndView toBoard() {
+		List<BuebeDTO> list = this.service.selectData();
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("list", list);
+		mav.setViewName("board.jsp");
+		return mav;
 	}
 }

@@ -48,36 +48,13 @@ table {
 			<th>작성자</th>
 			<th>작성시간</th>
 		</tr>
-		<tr>
-			<td>안녕하세요 여러분 브베입니다.</td>
-			<td>브베</td>
-			<td>2018-07-19</td>
-		<tr>
-		<tr>
-			<td>안녕하세요 여러분 브베입니다.</td>
-			<td>브베</td>
-			<td>2018-07-19</td>
-		<tr>
-		<tr>
-			<td>안녕하세요 여러분 브베입니다.</td>
-			<td>브베</td>
-			<td>2018-07-19</td>
-		<tr>
-		<tr>
-			<td>안녕하세요 여러분 브베입니다.</td>
-			<td>브베</td>
-			<td>2018-07-19</td>
-		<tr>
-		<tr>
-			<td>안녕하세요 여러분 브베입니다.</td>
-			<td>브베</td>
-			<td>2018-07-19</td>
-		<tr>
-		<tr>
-			<td>안녕하세요 여러분 브베입니다.</td>
-			<td>브베</td>
-			<td>2018-07-19</td>
-		<tr>
+		<c:forEach var="result" items="${list}">
+			<tr>
+				<a href="readArticle.do?seq=${result.seq}"><td>${result.title}</td></a>
+				<td>${result.writer}</td>
+				<td>${result.writedate}</td>
+			</tr>
+		</c:forEach>
 	</table>
 	</article> </section>
 </body>
