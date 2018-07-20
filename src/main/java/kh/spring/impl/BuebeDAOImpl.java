@@ -19,8 +19,8 @@ public class BuebeDAOImpl implements BuebeDAO{
 	
 	@Override
 	public int insertData(BuebeDTO dto) {
-		String sql ="insert into buebe values(buebe_seq.nextval,?,?,?,sysdate)";		
-		return template.update(sql,dto.getWriter(),dto.getTitle(),dto.getContents());
+		String sql ="insert into buebe values(buebe_seq.nextval,?,?,?,sysdate,?)";		
+		return template.update(sql,dto.getWriter(),dto.getTitle(),dto.getContents(),dto.getPassword());
 	}
 
 	@Override

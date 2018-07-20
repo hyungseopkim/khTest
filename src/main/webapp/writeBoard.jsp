@@ -52,11 +52,7 @@
 		}else{
 			$("#board").submit();
 		}
-		
-		
-		
 	});
-
  });
 
 </script>
@@ -100,7 +96,7 @@
                      <tr>
                         <td>&nbsp;</td>
                         <td align="center">비밀번호</td>
-                        <td><input name="password" size="50" maxlength="50" id="password"></td>
+                        <td><input name="password" size="50" maxlength="50" id="password" type="password"></td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr height="1" bgcolor="#dddddd">
