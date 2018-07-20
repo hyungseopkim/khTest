@@ -95,6 +95,7 @@ table {
 							<td>&nbsp;</td>
 							<td colspan="2">
 								<button id="back" type="button" class="btn btn-default">뒤로가기</button>
+								<button id="delete" type="button" class="btn btn-default">삭제</button>
 							</td>
 							<td>&nbsp;</td>
 						</tr>
