@@ -9,4 +9,5 @@ public interface BuebeDAO {
 	public List<BuebeDTO> selectData();
 	public int updateData(BuebeDTO dto);
 	public int deleteData(int seq);
+	public BuebeDTO getArticle(int seq);
 }
