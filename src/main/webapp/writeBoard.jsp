@@ -34,21 +34,29 @@
 		 $(location).attr("href","index.do");
 		 
 	 });
-	 $("#go").click(function(){
-			var title = $("#title").val();
-			var writer = $("#wrtier").val();
-			var contents = $("#contents").val();
-			
-			if(title==""){
-				alert("제목을 입력해주세요");
-			}else if(writer==""){
-				alert("작성자 명을 써주세요");
-			}else if(contents==""){
-				alert("내용을 입력해주세요");
-			}else{
-				$("#board").submit();
-			}
-		});
+	 
+	$("#go").click(function(){
+		var title = $("#title").val();
+		var writer=$("#writer").val();
+		var contents=$("#contents").val();
+		
+		if(title==""){
+			alert("제목을 입력해주세요.");
+			return false;
+		}else if(writer==""){
+			alert("작성자를 입력해주세요.");
+			return false;
+		}else if(contents==""){
+			alert("내용을 넣어주세요");
+			return false;
+		}else{
+			$("#board").submit();
+		}
+		
+		
+		
+	});
+
  });
 
 </script>
@@ -74,7 +82,7 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td align="center">제목</td>
-                        <td><input name="title" size="50" maxlength="100"></td>
+                        <td><input name="title" size="50" maxlength="100" id="title"></td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr height="1" bgcolor="#dddddd">
@@ -83,7 +91,7 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td align="center">이름</td>
-                        <td><input name="writer" size="50" maxlength="50"></td>
+                        <td><input name="writer" size="50" maxlength="50" id="writer"></td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr height="1" bgcolor="#dddddd">
@@ -94,7 +102,7 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td align="center">내용</td>
-                        <td><textarea name="contents" cols="50" rows="13" style="width: 384px;"></textarea></td>
+                        <td><textarea name="contents" cols="50" rows="13" style="width: 384px;" id="contents"></textarea></td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr height="1" bgcolor="#dddddd">
@@ -105,7 +113,7 @@
                     </tr>
                     <tr align="center">
                         <td>&nbsp;</td>
-                        <td colspan="2"><button class="btn btn-default" id="go" > 글 등록</button>
+                        <td colspan="2"><button class="btn btn-default" id="go" type="button"> 글 등록</button>
                             <button id="back" type="button" class="btn btn-default">작성취소</button>
                             <td>&nbsp;</td>
                     </tr>
