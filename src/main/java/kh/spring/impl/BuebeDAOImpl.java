@@ -36,7 +36,6 @@ public class BuebeDAOImpl implements BuebeDAO{
 				 dto.setWritedate(rs.getString("wirtedate"));
 				return dto;
 			}
-			
 		});
 	}
 

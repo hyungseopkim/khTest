@@ -37,6 +37,18 @@ article {
 table {
 	width: 100%;
 }
+
+a {
+	text-decoration: none;
+}
+
+tr:hover{
+	background-color: #e9e9e9
+}
+
+div{
+	text-align: center;
+}
 </style>
 </head>
 <body>
@@ -55,11 +67,9 @@ table {
 				<td>${result.writedate}</td>
 			</tr>
 		</c:forEach>
-		<tr>
-			<td colspan="3"><button id="back">뒤로가기</button></td>
-		</tr>
 	</table>
 	</article> </section>
+	<div><button id="back">뒤로가기</button></div>
 	<script>
 		document.getElementById("back").onclick = function(){
 			location.href = "index.do";
