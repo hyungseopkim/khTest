@@ -40,4 +40,8 @@ public class BuebeServiceImpl implements BuebeService {
 		return this.dao.deleteData(seq);
 	}
 
+	@Override
+	public BuebeDTO getArticle(int seq) {
+		return this.dao.getArticle(seq);
+	}
 }

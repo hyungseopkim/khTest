@@ -52,4 +52,19 @@ public class BuebeDAOImpl implements BuebeDAO{
 		return template.update(sql,seq);
 	}
 
+	@Override
+	public BuebeDTO getArticle(int seq) {
+		String sql = "SELECT * FROM BUEBE WHERE SEQ = ?";
+		return (BuebeDTO)template.queryForObject(sql, new Object[] {seq}, new RowMapper(){
+			@Override
+			public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
+				BuebeDTO dto = new BuebeDTO();
+				dto.setSeq(rs.getInt("seq"));
+				dto.setTitle(rs.getString("title"));
+				dto.setWriter(rs.getString("writer"));
+				dto.setContents(rs.getString("contents"));
+				return dto;
+			}
+		});
+	}
 }

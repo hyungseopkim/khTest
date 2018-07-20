@@ -50,12 +50,20 @@ table {
 		</tr>
 		<c:forEach var="result" items="${list}">
 			<tr>
-				<a href="readArticle.do?seq=${result.seq}"><td>${result.title}</td></a>
-				<td>${result.writer}</td>
+				<td><a href="readArticle.do?seq=${result.seq}">${result.title}</a></td>
+				<td><a href="readArticle.do?seq=${result.seq}">${result.writer}</a></td>
 				<td>${result.writedate}</td>
 			</tr>
 		</c:forEach>
+		<tr>
+			<td colspan="3"><button id="back">뒤로가기</button></td>
+		</tr>
 	</table>
 	</article> </section>
+	<script>
+		document.getElementById("back").onclick = function(){
+			location.href = "index.do";
+		}
+	</script>
 </body>
 </html>
