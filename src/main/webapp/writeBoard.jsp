@@ -32,14 +32,32 @@
  $(document).ready(function(){
 	 $("#back").click(function(){
 		 $(location).attr("href","index.do");
+		 
 	 });
+	 $("#go").click(function(){
+			var title = $("#title").val();
+			var writer = $("#wrtier").val();
+			var contents = $("#contents").val();
+			
+			if(title==""){
+				alert("제목을 입력해주세요");
+			}else if(writer==""){
+				alert("작성자 명을 써주세요");
+			}else if(contents==""){
+				alert("내용을 입력해주세요");
+			}else{
+				$("#board").submit();
+			}
+		});
  });
 
 </script>
+
+
 </head>
 
 <body>
-<form action="writeBoard.do" method="post">
+<form action="writeBoard.do" method="post" id="board">
     <table border="1" id="table">
         <tr>
             <td>
@@ -87,7 +105,7 @@
                     </tr>
                     <tr align="center">
                         <td>&nbsp;</td>
-                        <td colspan="2"><button class="btn btn-default">글 등록</button>
+                        <td colspan="2"><button class="btn btn-default" id="go" > 글 등록</button>
                             <button id="back" type="button" class="btn btn-default">작성취소</button>
                             <td>&nbsp;</td>
                     </tr>
